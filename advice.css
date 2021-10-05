@@ -47,7 +47,8 @@ main {
 }
 
 .card-left {
-  padding: 4.5rem;
+  padding: 2rem;
+  width: 60%;
 }
 
 img {
