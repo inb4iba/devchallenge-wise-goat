@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="advice.css" />
     <title>Wise Goat</title>
   </head>
   <body>
-    <h1>Teste</h1>
+    <header>
+      <h1 class="primary"><span class="secondary">Wise</span>Goat</h1>
+    </header>
+    <main>
+      <div class="card-left">
+        <p id="advice" class="quote primary"></p>
+        <span class="author">– Goat </span>
+      </div>
+      <img src="https://source.unsplash.com/350x400/?goat" alt="Bodezinho" />
+    </main>
   </body>
+
+  <script>
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => {
+        const adviceElement = document.getElementById("advice");
+        adviceElement.textContent = `"${data.slip.advice}"`;
+      });
+  </script>
 </html>

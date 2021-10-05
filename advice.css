@@ -10,4 +10,72 @@ body {
 :root {
   --color-primary: #72005f;
   --color-secondary: #baa193;
+  --color-author: #978073;
+  --bg-card: #f2e6f7;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-size: 3rem;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60%;
+  margin: auto;
+  background: var(--bg-card);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 1rem 0;
+  overflow: hidden;
+}
+
+.card-left {
+  padding: 4.5rem;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1rem 0 1rem 1rem;
+}
+
+.quote {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  width: 90%;
+}
+
+.author {
+  width: 75%;
+  display: inline-block;
+  text-align: right;
+  font-size: 1.8rem;
+  color: var(--color-author);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
 }
